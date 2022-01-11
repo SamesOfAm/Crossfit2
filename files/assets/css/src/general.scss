@@ -12,7 +12,6 @@ body{
       padding: 12px 30px;
       background:	$yellow;
       font-size: 22px;
-      margin: 50px 0;
       text-align: center;
       color: #fff;
       font-weight: 700;
@@ -20,7 +19,17 @@ body{
       border: 0;
       text-decoration: none;
       text-transform: uppercase;
+      transition: filter 250ms;
+      &:hover {
+        filter: brightness(1.2);
+      }
   }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Viewport min 768px */

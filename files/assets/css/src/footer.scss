@@ -2,39 +2,51 @@
 
 
 #footer {
+ padding-bottom: 20px;
  background: $gray;
  border-top: 1px solid #ccc;
- font-family: Barlow Condensed;
-
-
+ font-family: Barlow Condensed, sans-serif;
  .inside {
   color: white;
   font-size: 25px;
   letter-spacing: 1px;
-
   .box-wrapper {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    flex-wrap: wrap;
-   margin: 30px 500px;
-
+   width: 90%;
+   max-width: 1500px;
+   margin: 0 auto;
+   .ce_text {
+    width: 25%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    a {
+     color: white;
+     text-transform: uppercase;
+     transition: color 250ms;
+     &:hover {
+      color: $yellow;
+     }
+    }
+   }
    .ce_image {
     transform: translateY(-80px);
     background-color: #374049;
-    padding: 40px;
     box-shadow: 0 0 10px #2a323b;
+    img {
+     padding: 40px;
+    }
    }
   }
-
-
   .social-icons{
    display: flex;
    justify-content: space-between;
    margin: 20px auto;
    padding: 0;
    list-style: none;
-    width: 200px;
-
+   width: 200px;
    li a{
     color: white;
     cursor: pointer;
@@ -43,16 +55,16 @@
     }
    }
   }
-
-.footer1 {
- display: flex ;
- justify-content: space-between;
- margin: 20px auto;
- padding: 0;
- width: 160px;
- font-size: 15px;
-  a{
+ .footer1 {
+  display: flex ;
+  justify-content: space-between;
+  margin: 20px auto 0;
+  padding: 0;
+  width: 160px;
+  font-size: 15px;
+  a {
     text-decoration: none;
+    text-transform: uppercase;
     color: $yellow;
    }
   }

@@ -12,7 +12,8 @@
   .inside {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
+    max-width: 1500px;
     margin: 0 auto;
     .mod_navigation {
       width: 80%;
