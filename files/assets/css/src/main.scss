@@ -165,7 +165,7 @@ button {
 .banner1-text {
   position: absolute;
   bottom: 12vw;
-  right: 3vw;
+  right: 12vw;
   h2 {
     color: white;
   }
@@ -199,6 +199,7 @@ button {
       padding: 25px;
       transition: filter 250ms;
       h2,p,.ce_text {
+        width: 100%;
         text-transform: none;
         color: white;
         text-align: left;
@@ -277,18 +278,14 @@ button {
     box-sizing: border-box;
   }
 }
-#image-description{
-  text-transform: none;
-  text-align: left;
-  font-size: 20px;
-  h2, h3{
-    text-transform: uppercase;
-    font-weight: 700;
+
+.text1 a {
+  transition: color 250ms;
+  &:hover {
+    color: $yellow;
   }
 }
-#image-description .text1{
-  margin-top: 8%;
-}
+
 .email:before {
   content: "";
   display: block;
@@ -328,7 +325,7 @@ figure.float_left {
       color: black;
       transition: background-color 250ms;
       &:hover {
-        background-color: #c9c9c9;
+        background-color: #fff0c3;
       }
       &:before {
         content: '';
