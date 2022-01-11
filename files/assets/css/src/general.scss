@@ -1,0 +1,39 @@
+@import "variables";
+@import "footer";
+@import "header";
+@import "main";
+body{
+  font-family:"Barlow Condensed", sans-serif;
+}
+
+.button {
+    a {
+      display: inline-block;
+      padding: 12px 30px;
+      background:	$yellow;
+      font-size: 22px;
+      margin: 50px 0;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 2px;
+      border: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+}
+
+/* Viewport min 768px */
+@media screen and (min-width: 768px) {
+ header, inside{
+   width: 100%;
+   padding: 0;
+ }
+}
+
+/* Viewport min 960px */
+@media screen and (min-width: 960px) {
+  #wrapper {
+    padding: 0;
+  }
+}
