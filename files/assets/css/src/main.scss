@@ -342,61 +342,59 @@ figure.float_left {
   }
 }
 
-#block{
-  position: relative;
-  margin-top: 120px;
-  p{
-    text-transform: none;
+#kursplan{
+  margin: 50px auto;
+  .ce_text{
+    p{
+      text-transform: none;
+    }
   }
 }
 /* Formlar Kursplan */
 #formular1 {
- margin: -27px 40%;
-  padding: 20px;
   li {
-    border: 1px solid black;
-    padding: 8px;
-    list-style: none;
+    height: 28px;
+    margin: 7px 0;
     a {
-      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      width: 250px;
+      border: 1px solid black;
+      padding: 7px 10px;
       color: black;
+      transition: background-color 250ms;
+      &:hover {
+        background-color: #fff0c3;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 6px;
+        width: 30px;
+        height: 23px;
+        background: url("../layout/download.svg") no-repeat;
+        background-size: contain;
+      }
     }
-  }
-  li:before{
-    content: "";
-    background: url("../layout/download.svg") no-repeat;
-    width: 29px;
-    height: 23px;
-    float: left;
-    background-size: contain;
   }
 }
 /** Tabelle **/
-table {
+.kalendar{
   width: 90%;
-  overflow: auto;
+  max-width: 1500px;
+  margin: 10px auto 20px;
+}
+table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid black;
-  margin: 40px 5% 95px;
-  max-width: 1550px;
 }
-
 th,td {
   border: 1px solid black;
   padding: 5px 10px;
-
 }
-
-/*th {
-  background: $yellow;
-  font-weight: 600;
-  text-align: center;
-  color: white;
-  padding: 12px;
-  font-family: "Barlow Condensed";
-  font-size: 25px;
-} */
 
 .th {
   background: $yellow;
@@ -408,22 +406,23 @@ th,td {
   font-size: 25px;
 }
 /* Kursplan*/
-.courses{
-
-  flex-wrap: wrap;
-  justify-content: space-between;
-  display: flex;
-  margin: 70px auto;
-  width: 90%;
-  max-width: 1550px;
+#kursangebot {
+  margin: 100px auto;
+  .courses {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    margin: 70px auto;
+    width: 95%;
+    max-width: 1500px;
+  }
 }
 .courses .ce_text {
   width: 48%;
-  border: 2px solid gray;
-  margin: 8px auto;
-  box-sizing: border-box;
+  margin: 6px auto;
   text-align: left;
-  font-size: 17px;
+  font-size: 16px;
+  box-shadow: 0 0 10px #999;
   figure{
     float: left;
     width: 48%;
@@ -450,7 +449,7 @@ th,td {
   margin: 15px;
   font-size: 17px;
 }
-.image-description1{
+/*.image-description1{
   text-transform: none;
   text-align: left;
   font-size: 20px;
@@ -476,7 +475,7 @@ th,td {
       width: 100%;
     }
   }
-}
+}*/
 .image-description2 {
   text-transform: none;
   text-align: left;
@@ -507,22 +506,10 @@ th,td {
   text-transform: none;
   background: url("../layout/lift-bg2.png") no-repeat bottom right/cover;
   min-height: 80vh;
-  margin-top: 0;
   text-align: left;
-  font-size: 20px;
-  p, h2, h3{
-    text-transform: none;
-    margin-left: 20%;
-    font-family: "Barlow Condensed", sans-serif;;
-    line-height: 32px;
-  }
-  h2, h3{
-    text-transform: uppercase;
-  }
+  padding-left: 100px;
 }
-#image-description1 .text{
-  margin: 13% -25%;
-  }
+
 
 .coaches{
   width: 90%;
@@ -669,28 +656,51 @@ textarea{
   width: 50%;
   float: left;
 }
+.image-right{
+  width: 50%;
+  float: right;
+}
 
-.half-image-left {
+.half-image {
   height: 70vh;
 }
 
-.text-right {
+.half-text {
   width: 90%;
   height: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  .text-right-inner {
+
+  .half-text-inner {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
     height: 100%;
-    padding-left: 100px;
     box-sizing: border-box;
     align-content: center;
-    float: right;
     text-align: left;
-    .ce_text,.ce_downloads {
+
+    .ce_text, .ce_downloads {
       width: 100%;
     }
+
+  }
+}
+.text-right-inner {
+  padding-left: 100px;
+  float: right;
+}
+.text-left-inner {
+  padding-right: 100px;
+  float: left;
+}
+.text-description{
+  text-transform: none;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: normal;
+  font-family: "Barlow Condensed", sans-serif;
+  h2, h3{
+    text-transform: uppercase;
   }
 }
