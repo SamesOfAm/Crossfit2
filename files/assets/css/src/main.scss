@@ -353,7 +353,6 @@ figure.float_left {
 /* Formlar Kursplan */
 #formular1 {
   li {
-    height: 28px;
     margin: 7px 0;
     a {
       position: relative;
@@ -502,12 +501,9 @@ th,td {
   }
 }
 
-#image-description1{
-  text-transform: none;
+#lifting-lady-background {
   background: url("../layout/lift-bg2.png") no-repeat bottom right/cover;
-  min-height: 80vh;
-  text-align: left;
-  padding-left: 100px;
+  height: 80vh;
 }
 
 
@@ -653,15 +649,25 @@ textarea{
 }
 
 .image-left {
+  width: 40%;
+  float: left;
+}
+
+.image-left-termin {
   width: 50%;
   float: left;
 }
+
 .image-right{
-  width: 50%;
+  width: 40%;
   float: right;
 }
 
 .half-image {
+  height: 80vh;
+}
+
+.half-image-termin {
   height: 70vh;
 }
 
@@ -670,7 +676,6 @@ textarea{
   height: 100%;
   max-width: 1500px;
   margin: 0 auto;
-
   .half-text-inner {
     display: flex;
     flex-wrap: wrap;
@@ -679,22 +684,49 @@ textarea{
     box-sizing: border-box;
     align-content: center;
     text-align: left;
-
     .ce_text, .ce_downloads {
       width: 100%;
     }
-
   }
 }
+
 .text-right-inner {
-  padding-left: 100px;
   float: right;
 }
+
 .text-left-inner {
-  padding-right: 100px;
   float: left;
 }
-.text-description{
+
+.half-text-termin {
+  width: 90%;
+  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  .half-text-inner-termin {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    align-content: center;
+    text-align: left;
+    .ce_text, .ce_downloads {
+      width: 100%;
+    }
+  }
+}
+
+.text-right-inner-termin {
+  float: right;
+  padding-left: 50px;
+}
+.text-left-inner {
+  float: left;
+  padding-right: 50px;
+}
+
+.text-description {
   text-transform: none;
   font-size: 17px;
   line-height: 28px;
@@ -703,4 +735,29 @@ textarea{
   h2, h3{
     text-transform: uppercase;
   }
+}
+
+#map {
+  height: 80vh;
+  z-index: 0;
+}
+
+.leaflet-popup-pane {
+  transform: translateY(-41px);
+}
+
+#news-detail {
+  text-transform: none;
+}
+
+.mod_newsreader {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 21px;
+}
+
+.banner-image-article.small {
+  height: 45vh;
 }
