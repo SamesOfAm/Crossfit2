@@ -187,7 +187,7 @@ button {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    max-width: 1500px;
+    max-width: $max-width;
     margin: 40px auto;
     .layout_latest {
       display: flex;
@@ -381,7 +381,7 @@ figure.float_left {
 /** Tabelle **/
 .kalendar{
   width: 90%;
-  max-width: 1500px;
+  max-width: $max-width;
   margin: 10px auto 20px;
 }
 table {
@@ -413,7 +413,7 @@ th,td {
     display: flex;
     margin: 70px auto;
     width: 95%;
-    max-width: 1500px;
+    max-width: $max-width;
   }
 }
 .courses .ce_text {
@@ -582,7 +582,7 @@ textarea{
 .probetraining {
   iframe {
     width: 90%;
-    max-width: 1500px;
+    max-width: $max-width;
     margin-bottom: 200px;
   }
 }
@@ -601,7 +601,7 @@ textarea{
 .testimonials {
   .ce_caroufredsel_start {
     width: 90%;
-    max-width: 1500px;
+    max-width: $max-width;
     margin: 0 auto;
     overflow: visible;
     .caroufredsel_wrapper {
@@ -674,7 +674,7 @@ textarea{
 .half-text {
   width: 90%;
   height: 100%;
-  max-width: 1500px;
+  max-width: $max-width-big;
   margin: 0 auto;
   .half-text-inner {
     display: flex;
@@ -701,7 +701,7 @@ textarea{
 .half-text-termin {
   width: 90%;
   height: 100%;
-  max-width: 1500px;
+  max-width: $max-width;
   margin: 0 auto;
   .half-text-inner-termin {
     display: flex;
