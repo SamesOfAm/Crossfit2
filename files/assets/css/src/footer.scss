@@ -52,10 +52,10 @@
     cursor: pointer;
     transition: filter 250ms;
     &:hover {
-     filter: brightness(.8);
+     filter: brightness(.4);
     }
     img{
-     width: 25px;
+     height: 30px;
     }
    }
   }

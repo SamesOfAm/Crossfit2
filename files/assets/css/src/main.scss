@@ -7,15 +7,21 @@
 
 .banner-image-article{
   position: relative;
+  height: 75vh;
 }
-.teaser-text {
+.teaser-text{
   position: absolute;
-  bottom: 130px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
   text-transform: uppercase;
   text-align: center;
+  font-size: 25px;
+  h2{
+    font-size: 45px;
+    color: white;
+  }
   a {
     padding: 7px 12px;
     text-transform: uppercase;
@@ -67,7 +73,7 @@
 .sidebar {
   position: fixed;
   top: 30%;
-  width: 180px;
+  width: 45px;
   z-index: 200;
   transform: translateY(-20%);
   color: white;
@@ -85,11 +91,37 @@
     margin: 20px 0;
     display: block;
     text-align: center;
-    transition: padding-right 250ms;
+    transition: transform 250ms;
     &:hover {
-      padding-right: 55px;
+      transition: transform 250ms;
+      padding-right: 150px;
+
     }
   }
+}
+.termin, .kursbuchung, .map-marker{
+  transform: translateX(125px);
+}
+.termin:before, .kursbuchung:before, .map-marker:before{
+  content: "";
+  display: block;
+  width: 23px;
+  height: 30px;
+  float: left;
+  margin: 2px 13px -3px -7px;
+  background-size: contain;
+}
+.termin:before{
+  background-image: url("../layout/phone-white.svg");
+  background-repeat: no-repeat;
+}
+.kursbuchung:before{
+  background-image: url("../layout/kursbuchung.svg");
+  background-repeat: no-repeat;
+}
+.map-marker:before{
+  background-image: url("../layout/standort.png");
+  background-repeat: no-repeat;
 }
 
 .mod_article {
@@ -153,6 +185,7 @@ button {
 
 #menu-image-article {
   position: relative;
+  height: 80vh;
 }
 
 #menu-image{
@@ -189,6 +222,7 @@ button {
     width: 90%;
     max-width: $max-width;
     margin: 40px auto;
+    flex-wrap: wrap;
     .layout_latest {
       display: flex;
       flex-wrap: wrap;
@@ -198,6 +232,7 @@ button {
       box-sizing: border-box;
       padding: 25px;
       transition: filter 250ms;
+      margin: 10px 0;
       h2,p,.ce_text {
         width: 100%;
         text-transform: none;
@@ -242,7 +277,7 @@ button {
 }
 
 
-.box-wrapper1 {
+/*.box-wrapper1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -277,7 +312,7 @@ button {
     width: 30%;
     box-sizing: border-box;
   }
-}
+} */
 
 .text1 a {
   transition: color 250ms;
@@ -425,6 +460,7 @@ th,td {
   figure{
     float: left;
     width: 48%;
+    margin-right: 25px
   }
 }
 .courses p, h2, a{
@@ -439,13 +475,14 @@ th,td {
   content: "";
   background: url("../layout/arrow-right1.svg") no-repeat;
   width: 50px;
-  height: 67px;
+  height: 70px;
   float: left;
   background-size: 60px;
+  margin-left: 226px;
 }
 .arrow-right a, .arrow-right1 a{
   position: absolute;
-  margin: 15px;
+  margin: 32px;
   font-size: 17px;
 }
 /*.image-description1{
@@ -510,10 +547,31 @@ th,td {
 .coaches{
   width: 90%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   margin: 89px auto;
-  max-width: 1550px;
+  max-width: 1500px;
+  .ce_image {
+    box-shadow: 0 0 10px #999;
+    margin-bottom: 17px;
+    width: 23%;
+    img {
+      max-height: 259px;
+      object-fit: cover;
+    }
+    figcaption {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      transition: background-color 250ms;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    &:hover figcaption {
+      background-color: $yellow;
+    }
+  }
 }
 /* Formular */
 .formbody{
@@ -579,13 +637,14 @@ textarea{
   font-size: 15px;
 }
 
-.probetraining {
+.probetraining, #kursbuchung {
   iframe {
     width: 90%;
     max-width: $max-width;
     margin-bottom: 200px;
   }
 }
+
 
 .caroufredsel_controls .caroufredsel_prev {
   position: absolute;
@@ -617,7 +676,7 @@ textarea{
         p {
           text-align: center;
           text-transform: none;
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.5em;
         }
         img {
@@ -680,7 +739,6 @@ textarea{
     display: flex;
     flex-wrap: wrap;
     width: 50%;
-    height: 100%;
     box-sizing: border-box;
     align-content: center;
     text-align: left;
@@ -737,6 +795,7 @@ textarea{
   }
 }
 
+
 #map {
   height: 80vh;
   z-index: 0;
@@ -760,4 +819,77 @@ textarea{
 
 .banner-image-article.small {
   height: 45vh;
+}
+/* Beispiel-Text*/
+.lorem{
+  text-transform: none;
+  text-align: left;
+  margin: 21px;
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  width: $max-width;
+  margin: 25px auto;
+}
+
+/* Unsure BOX*/
+.ce_sliderStart {
+  background: white;
+  width: 90vw;
+}
+
+.slider-control {
+  height: 60px;
+}
+
+.slider-control .slider-menu {
+  display: none;
+}
+
+.slider-control .slider-prev {
+  left: 5%;
+  width: 5%;
+  top: -350px;
+}
+
+.slider-control .slider-next {
+  right: 5%;
+  width: 5%;
+  top: -350px;
+}
+.slider-wrapper{
+  .image_container{
+    img{
+      width: 65%;
+      margin-left: 100px;
+    }
+  }
+}
+.yellow-underline, .yellow-underline1, .yellow-underline2, .headline{
+  font-size: 35px;
+}
+.yellow-underline, .yellow-underline1, .yellow-underline2, #paragraph p{
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 5px;
+    background: $yellow;
+  }
+}
+#paragraph {
+   text-transform: none;
+}
+.yellow-underline1:after{
+  left: 27%;
+}
+.yellow-underline2:after{
+  left:4%
+}
+/*link*/
+.link a {
+  color: $yellow;
 }
