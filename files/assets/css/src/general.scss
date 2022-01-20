@@ -31,26 +31,14 @@ ul {
   padding: 0;
   list-style: none;
 }
-/* Viewport min 768px */
-@media screen and (min-width: 768px) {
- header, inside{
-   width: 100%;
-   padding: 0;
- }
-  .new{
-    .mod_newslist{
-      .layout_latest{
-        width: 90%;
-        margin: 10px;
-        background: blue;
-      }
-    }
-  }
+.mobile-only{
+  display: none;
 }
-
-/* Viewport min 960px */
-@media screen and (min-width: 960px) {
-  #wrapper {
-    padding: 0;
+@media screen and (max-width: $mobile) {
+  .mobile-only{
+    display: block;
+  }
+  .desktop-only{
+    display: none;
   }
 }

@@ -93,8 +93,8 @@
     text-align: center;
     transition: transform 250ms;
     &:hover {
-      transition: transform 250ms;
-      padding-right: 150px;
+     transform: translateX(0);
+
 
     }
   }
@@ -259,11 +259,11 @@ button {
   }
 }
 
-.image-slogan img {
+/*.image-slogan img {
   position: absolute;
   top: 38%;
   right: 15%;
-}
+}*/
 
 #container-main {
  margin:  30px 8% 50px 8%;
@@ -715,6 +715,15 @@ textarea{
 .image-left-termin {
   width: 50%;
   float: left;
+  height: 100%;
+  figure {
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .image-right{
@@ -722,8 +731,8 @@ textarea{
   float: right;
 }
 
-.half-image {
-  height: 80vh;
+.half-image .ce_image figure img {
+  width: 100%;
 }
 
 .half-image-termin {
@@ -893,3 +902,62 @@ textarea{
 .link a {
   color: $yellow;
 }
+div.mobile-only:nth-child(3) {
+  margin: 9px;
+}
+@media screen and (max-width: $mobile) {
+  #news .mod_newslist .layout_latest {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .banner-image-article {
+    height: 100%;
+  }
+  .teaser-text {
+    bottom: 10px;
+    left: 35%;
+    transform: translateX(-25%);
+    font-size: 11px;
+  }
+  .yellow-underline {
+    font-size: 26px;
+  }
+  .caroufredsel_controls .caroufredsel_prev {
+    left: 2px;
+    top: 44%;
+
+    img {
+      width: 38px;
+    }
+  }
+  .caroufredsel_controls .caroufredsel_next {
+    right: 2px;
+    top: 44%;
+    img {
+      width: 38px;
+    }
+  }
+  #menu-image-article {
+    background: black;
+  }
+    #menu-image{
+      height: 100%;
+      .image_container{
+        height: 100%;
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center 115px;
+        }
+      }
+    }
+  .banner1-text {
+    bottom: 71vw;
+    font-size: 15px;
+    transform: translateX(32px);
+  }
+  }
