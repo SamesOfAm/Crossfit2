@@ -1,0 +1,35 @@
+@import 'variables';
+
+.mobile_menu {
+  z-index: 1000;
+  .inner {
+    background: $gray;
+    .menu-close {
+      color: white;
+      position: absolute;
+      top: 4px;
+      right: 5vw;
+      font-size: 70px;
+    }
+  }
+  .mod_navigation {
+    width: 90%;
+    margin: 100px auto;
+    ul {
+      li {
+        padding: 10px 0;
+        a,strong {
+          color: white;
+          text-transform: uppercase;
+          font-size: 30px;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid white;
+        }
+        &.active strong {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}

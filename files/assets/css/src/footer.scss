@@ -78,3 +78,33 @@
   }
  }
 }
+
+@media screen and (max-width: $mobile) {
+ #footer .inside {
+  .box-wrapper {
+   .ce_text {
+    display: none;
+   }
+   .ce_image {
+    img {
+     width: 80px;
+    }
+   }
+  }
+  .mod_customnav.mobile-only {
+   margin-bottom: 60px;
+   ul {
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+    li {
+     padding: 10px 0;
+     a {
+      color: white;
+      text-transform: uppercase;
+     }
+    }
+   }
+  }
+ }
+}

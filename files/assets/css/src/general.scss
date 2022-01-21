@@ -2,6 +2,7 @@
 @import "footer";
 @import "header";
 @import "main";
+@import "menu";
 body{
   font-family:"Barlow Condensed", sans-serif;
 }
@@ -24,6 +25,10 @@ body{
         filter: brightness(1.2);
       }
   }
+}
+
+h2 {
+  line-height: 1.3em;
 }
 
 ul {

@@ -1,6 +1,6 @@
 @import "variables";
 
-#header{
+#header {
   position: absolute;
   z-index: 200;
   width:100%;
@@ -79,17 +79,34 @@
     }
   }
 }
-@media screen and (max-width: $mobile){
-  .banner-image-article{
-   height: 100%;
+
+.mobile_menu_trigger {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  img {
+    width: 60px;
   }
-  .header-image  {
-    img{
-      width: 100%;
-      object-position: 0px 70px;
-      height: 100%;
+}
+
+@media screen and (max-width: $mobile) {
+  #header {
+    transform: none;
+    height: 80px;
+    background-color: rgba(55,64,73,1);
+    .inside {
+      #logo {
+        width: 70px;
+        transform: none;
+        background-color: #374049;
+        &:after {
+          background-color: rgba(55,64,73,1);
+        }
+      }
+      .mod_navigation {
+        display: none;
+      }
     }
   }
-
 }
 

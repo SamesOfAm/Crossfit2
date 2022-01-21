@@ -1,0 +1,21 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<figure class="image_container"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
+
+  <a onclick="toggleCoachPopup('<?= $this->class ?>');" <?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->attributes ?>>
+
+
+    <?php $this->insert('picture_default', $this->picture); ?>
+
+    <?php if ($this->caption): ?>
+      <figcaption class="caption"><?= $this->caption ?></figcaption>
+    <?php endif; ?>
+
+  </a>
+
+
+</figure>
+
+<?php $this->endblock(); ?>
