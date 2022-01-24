@@ -99,9 +99,13 @@
     text-align: center;
     li {
      padding: 10px 0;
-     a {
+     a,strong {
       color: white;
       text-transform: uppercase;
+     }
+     strong {
+      font-weight: normal;
+      color: $yellow;
      }
     }
    }

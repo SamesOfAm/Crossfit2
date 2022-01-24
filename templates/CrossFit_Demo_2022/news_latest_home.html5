@@ -9,7 +9,7 @@
     <?php $this->insert('image', $this->arrData); ?>
   <?php endif; ?>
 
-  <h2 itemprop="name"><?= $this->headline ?></h2>
+  <h3 itemprop="name"><?= $this->headline ?></h3>
 
   <div class="ce_text block" itemprop="description">
     <?= $this->teaser ?>

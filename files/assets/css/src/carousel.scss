@@ -1,0 +1,135 @@
+@import 'variables';
+
+
+.werde-fit {
+  .caroufredsel_wrapper {
+    padding-bottom: 20px;
+  }
+  .ce_image {
+    box-shadow: 0 0 10px #999;
+    img {
+      max-height: 259px;
+      object-fit: cover;
+    }
+    figcaption {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      transition: background-color 250ms;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    &:hover figcaption {
+      background-color: $yellow;
+    }
+  }
+}
+
+.caroufredsel > div:not(:last-child) {
+  margin: 4px;
+}
+
+.caroufredsel_skin {
+  position: relative;
+}
+
+.caroufredsel_controls .caroufredsel_next {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-100%);
+  img {
+    width: 60px;
+  }
+}
+
+.testimonials {
+  .ce_caroufredsel_start {
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+    overflow: visible;
+    .caroufredsel_wrapper {
+      padding-bottom: 20px;
+      .caroufredsel > div {
+        height: 500px;
+        box-shadow: 0 0 10px #c9c9c9;
+        h3 {
+          text-align: center;
+          font-weight: normal;
+          font-size: 25px;
+        }
+        p {
+          text-align: center;
+          text-transform: none;
+          font-size: 15px;
+          line-height: 1.5em;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .caroufredsel_controls {
+      .caroufredsel_prev {
+        position: absolute;
+        left: -120px;
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+          width: 120px;
+        }
+      }
+      .caroufredsel_next {
+        position: absolute;
+        right: -120px;
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+
+.caroufredsel_controls .caroufredsel_prev {
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-100%);
+  img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .caroufredsel_controls .caroufredsel_prev {
+    left: 2px;
+    top: 44%;
+
+    img {
+      width: 38px;
+    }
+  }
+
+  .caroufredsel_controls .caroufredsel_next {
+    right: 2px;
+    top: 44%;
+    img {
+      width: 38px;
+    }
+  }
+
+  .testimonials .ce_caroufredsel_start .caroufredsel_wrapper .caroufredsel > div {
+    height: auto;
+    .ce_text {
+      padding: 20px;
+      p {
+        text-align: left;
+        font-size: 20px;
+      }
+    }
+  }
+}
