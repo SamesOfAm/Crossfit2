@@ -61,6 +61,19 @@
   font-size: 21px;
 }
 
+.pagination {
+  width: 100%;
+  ul {
+    display: flex;
+    margin: 0 auto;
+    width: 150px;
+    justify-content: space-between;
+    li {
+      width: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: $mobile) {
   #news .mod_newslist .layout_latest {
     width: 100%;
